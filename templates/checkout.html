@@ -5,11 +5,11 @@
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="keywords" content="ecommerce, market, shop, mart, cart, deal, multipurpose, marketplace">
-    <meta name="description" content="Carrot - Multipurpose eCommerce HTML Template.">
+    <meta name="keywords" content="">
+    <meta name="description" content="">
     <meta name="author" content="">
 
-    <title>Killer Bean Coffee - Home Page </title>
+    <title>Checkout</title>
 
     <!-- App favicon -->
     <link rel="shortcut icon" href="/static/img/logo/killerbeanFavicon.png">
@@ -28,7 +28,7 @@
     <link rel="stylesheet" href="/static/css/vendor/slick-theme.css">
 
     <!-- Main CSS -->
-    <link rel="stylesheet" href="/static//css/style.css">
+    <link rel="stylesheet" href="/static/css/style.css">
 </head>
 
 <body class="body-bg-6">
@@ -120,8 +120,8 @@
                 <div class="row">
                     <div class="col-lg-12">
                         <div class="cr-breadcrumb-title">
-                            <h2>Cart</h2>
-                            <span> <a href="index.html">Home</a> / Cart</span>
+                            <h2>Checkout</h2>
+                            <span> <a href="index.html">Home</a> - Checkout</span>
                         </div>
                     </div>
                 </div>
@@ -129,101 +129,35 @@
         </div>
     </section>
 
-    <!-- Cart -->
-    <section class="section-cart padding-t-100">
+    <!-- Checkout section -->
+    <section class="cr-checkout-section padding-tb-100">
         <div class="container">
-            <div class="row d-none">
-                <div class="col-lg-12">
-                    <div class="mb-30" data-aos="fade-up" data-aos-duration="2000" data-aos-delay="400">
-                        <div class="cr-banner">
-                            <h2>Cart</h2>
-                        </div>
-                        <div class="cr-banner-sub-title">
-                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt
-                                ut labore lacus vel facilisis. </p>
-                        </div>
-                    </div>
-                </div>
-            </div>
             <div class="row">
-                <div class="col-12">
-                    <div class="cr-cart-content" data-aos="fade-up" data-aos-duration="2000" data-aos-delay="400">
-                        <div class="row">
-                            <form action="#">
-                                <div class="cr-table-content">
-                                    <table>
-                                        <thead>
-                                            <tr>
-                                                <th>Product</th>
-                                                <th>price</th>
-                                                <th class="text-center">Quantity</th>
-                                                <th>Total</th>
-                                                <th>Action</th>
-                                            </tr>
-                                        </thead>
-                                        <tbody>
-                                        {% for row in rows %}
-                                            <tr>
-                                                <td class="cr-cart-name">
-                                                    <a href="javascript:void(0)">
-                                                        <img src="/static/img/product/{{ row[3] }}" alt="product-1"
-                                                            class="cr-cart-img">
-                                                        {{ row[1] }}
-                                                    </a>
-                                                </td>
-                                                <td class="cr-cart-price">
-                                                    <span class="amount">${{ row[2] }}</span>
-                                                </td>
-                                                <td class="cr-cart-qty">
-                                                     <form action="/update_quantity" method="post">
+                <!-- Sidebar Area Start -->
+                <div class="cr-checkout-rightside col-lg-4 col-md-12">
+                    <div class="cr-sidebar-wrap">
+                        <!-- Sidebar Summary Block -->
+                        <div class="cr-sidebar-block">
+                            <div class="cr-sb-title">
+                                <h3 class="cr-sidebar-title">#- Order has been place. Please take the printed token with your number and order info on it for identification.</h3>
+                                <hr>
+                                <h3 class="cr-sidebar-title">$ - Payments will be Processed at the Desk. Your total is ${{ totat_price }}.</h3>
+                                <hr>
+                                <a class="cr-sidebar-subtitle" href="{{ url_for('hello_world') }}">Thank you for shopping with us. CLICK HERE</a>
 
-                                                         <input type="number" name="quantity" value="{{ row[4] }}">
-
-                                                         <input value="{{ row[0] }}" name="id" hidden>
-
-                                                         <button type="submit" class="cr-button">Update</button>
-
-                                                     </form>
-                                                </td>
-                                                <td class="cr-cart-subtotal">${{ row[4]*row[2] }}</td>
-                                                <td class="cr-cart-remove">
-                                                    <a href="javascript:void(0)">
-                                                        <form action="/remove_from_cart" method="post">
-                                                            <input value="{{ row[0] }}" name="id" hidden>
-                                                            <button type="submit" >Delete
-                                                            <i class="ri-delete-bin-line"></i>
-                                                            </button>
-                                                        </form>
-                                                    </a>
-                                                </td>
-                                            </tr>
-                                        {% endfor %}
-
-                                        </tbody>
-                                    </table>
-                                </div>
-                                <div class="row">
-                                    <div class="col-lg-12">
-                                        <div class="cr-cart-update-bottom">
-                                            <a href="{{ url_for('coffee_all')}}" class="cr-links">Continue Shopping</a>
-                                            <a href="{{ url_for('checkout') }}" class="cr-button">
-                                                Check Out
-                                            </a>
-                                        </div>
-                                    </div>
-                                </div>
-                            </form>
+                            </div>
                         </div>
+                        <!-- Sidebar Summary Block -->
                     </div>
+
                 </div>
             </div>
         </div>
     </section>
-
+    <!-- Checkout section End -->
 
     <!-- Footer -->
-    {% include 'footer.html' %}
-
+{% include 'footer.html' %}
     <!-- Tab to top -->
     <a href="#Top" class="back-to-top result-placeholder">
         <i class="ri-arrow-up-line"></i>
@@ -233,6 +167,90 @@
             </svg>
         </div>
     </a>
+
+    <!-- Cart -->
+
+
+    <!-- Side-tool -->
+    <div class="cr-tool-overlay"></div>
+    <div class="cr-tool">
+        <div class="cr-tool-btn">
+            <a href="javascript:void(0)" class="btn-cr-tool result-placeholder">
+                <i class="ri-settings-line"></i>
+            </a>
+            <div class="color-variant">
+                <div class="cr-bar-title">
+                    <h6>Tools</h6>
+                    <a href="javascript:void(0)" class="close-tools">
+                        <i class="ri-close-line"></i>
+                    </a>
+                </div>
+                <div class="cr-tools-detail">
+                    <div class="heading">
+                        <h2>Select Color</h2>
+                    </div>
+                    <ul class="cr-color">
+                        <li class="colors c1 active-colors">
+                        </li>
+                        <li class="colors c2">
+                        </li>
+                        <li class="colors c3">
+                        </li>
+                        <li class="colors c4">
+                        </li>
+                        <li class="colors c5">
+                        </li>
+                        <li class="colors c6">
+                        </li>
+                        <li class="colors c7">
+                        </li>
+                        <li class="colors c8">
+                        </li>
+                        <li class="colors c9">
+                        </li>
+                        <li class="colors c10">
+                        </li>
+                    </ul>
+                </div>
+                <div class="cr-tools-detail">
+                    <div class="heading">
+                        <h2>Dark mode</h2>
+                    </div>
+                    <ul class="dark-mode">
+                        <li class="dark">
+                        </li>
+                        <li class="white active-dark-mode">
+                        </li>
+                    </ul>
+                </div>
+                <div class="cr-tools-detail">
+                    <div class="heading">
+                        <h2>Backgrounds</h2>
+                    </div>
+                    <ul class="bg-panel">
+                        <li class="bg-1">
+                            <img src="/static/img/shape/bg-shape-1.png" alt="bg-shape-1">
+                        </li>
+                        <li class="bg-2">
+                            <img src="/static/img/shape/bg-shape-2.png" alt="bg-shape-2">
+                        </li>
+                        <li class="bg-3">
+                            <img src="/static/img/shape/bg-shape-3.png" alt="bg-shape-3">
+                        </li>
+                        <li class="bg-4">
+                            <img src="/static/img/shape/bg-shape-4.png" alt="bg-shape-4">
+                        </li>
+                        <li class="bg-5">
+                            <img src="/static/img/shape/bg-shape-5.png" alt="bg-shape-5">
+                        </li>
+                        <li class="bg-6 active-bg-panel">
+                            <img src="/static/img/shape/bg-shape-6.png" alt="bg-shape-6">
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
 
     <!-- Vendor Custom -->
     <script src="/static/js/vendor/jquery-3.6.4.min.js"></script>
@@ -246,7 +264,6 @@
 
     <!-- Main Custom -->
     <script src="/static/js/main.js"></script>
-
 </body>
 
 </html>

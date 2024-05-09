@@ -1,9 +1,4 @@
-<!-- ========================================================= 
-    Item Name: Carrot - Multipurpose eCommerce HTML Template.
-    Author: ashishmaraviya
-    Version: 1.1
-    Copyright 2024
- ============================================================-->
+
 <!DOCTYPE html>
 <html lang="en" dir="ltr">
 
@@ -13,7 +8,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="keywords" content="ecommerce, market, shop, mart, cart, deal, multipurpose, marketplace">
     <meta name="description" content="Carrot - Multipurpose eCommerce HTML Template.">
-    <meta name="author" content="ashishmaraviya">
+    <meta name="author" content="">
 
     <title>Killer Bean Coffee - Home Page </title>
 
@@ -34,7 +29,7 @@
     <link rel="stylesheet" href="/static/css/vendor/slick-theme.css">
 
     <!-- Main CSS -->
-    <link rel="stylesheet" href="/static//css/style.css">
+    <link rel="stylesheet" href="/static/css/style.css">
 </head>
 
 <body class="body-bg-6">
@@ -63,7 +58,7 @@
                         <span class="menu-toggle"></span>
                         <a href="javascript:void(0)" class="dropdown-list">Category</a>
                         <ul class="sub-menu">
-                            <li><a href="shop-left-sidebar.html">Shop Left sidebar</a></li>
+                            <li><a href="{{ url_for('coffee_all') }}">Shop Left sidebar</a></li>
                             <li><a href="shop-right-sidebar.html">Shop Right sidebar</a></li>
                             <li><a href="shop-full-width.html">Full Width</a></li>
                         </ul>
@@ -72,7 +67,7 @@
                         <span class="menu-toggle"></span>
                         <a href="javascript:void(0)" class="dropdown-list">product</a>
                         <ul class="sub-menu">
-                            <li><a href="product-left-sidebar.html">product Left sidebar</a></li>
+                            <li><a href="{{ url_for('coffee_all') }}">product Left sidebar</a></li>
                             <li><a href="product-right-sidebar.html">product Right sidebar</a></li>
                             <li><a href="product-full-width.html">Product Full Width </a></li>
                         </ul>
@@ -133,7 +128,7 @@
                                         <h1>Warm mug in hand, worries out of land.</h1>
                                         <p>Pick your coffee from here, because sometimes all we need is a perfect sip of that perfect coffee.</p>
                                         <div class="cr-last-buttons">
-                                            <a href="shop-left-sidebar.html" class="cr-button">
+                                            <a href="{{ url_for('coffee_all') }}" class="cr-button">
                                                 shop now
                                             </a>
                                         </div>
@@ -153,7 +148,7 @@
                                         <h1>Espresso shot, wakes you up a lot.</h1>
                                         <p>Enjoy the different varieties of fresh brew we offer.</p>
                                         <div class="cr-last-buttons">
-                                            <a href="shop-left-sidebar.html" class="cr-button">
+                                            <a href="{{ url_for('coffee_all') }}" class="cr-button">
                                                 shop now
                                             </a>
                                         </div>
@@ -193,18 +188,18 @@
                                     <li data-filter=".americano">Americano</li>
                                     <li data-filter=".cappuccinos">Cappuccinos</li>
                                     <li data-filter=".espresso">Espresso</li>
-                                    <li data-filter=".bakery">Bakery</li>
+                                    <li data-filter=".specials">Specials</li>
                                 </ul>
                             </div>
                         </div>
                         <div class="col-lg-12 col-sm-6 col-6 cr-product-box banner-480 mb-24">
                             <div class="cr-ice-cubes">
-                                <img src="/static/img/product/product-banner.jpg" alt="product banner">
+                                <img src="/static/img/product/Espresso.jpeg" alt="product banner">
                                 <div class="cr-ice-cubes-contain">
                                     <h4 class="title">Juicy </h4>
                                     <h5 class="sub-title">espressos</h5>
                                     <span>100% Natural</span>
-                                    <a href="shop-left-sidebar.html" class="cr-button">Shop Now</a>
+                                    <a href="{{ url_for('coffee_all') }}" class="cr-button">Shop Now</a>
                                 </div>
                             </div>
                         </div>
@@ -218,22 +213,11 @@
                                     <div class="cr-image-inner zoom-image-hover">
                                         <img src="/static/img/product/CappuccinoCaremel.jpeg" alt="product-1">
                                     </div>
-                                    <div class="cr-side-view">
-                                        <a href="javascript:void(0)" class="wishlist">
-                                            <i class="ri-heart-line"></i>
-                                        </a>
-                                        <a class="model-oraganic-product" data-bs-toggle="modal" href="#quickview"
-                                            role="button">
-                                            <i class="ri-eye-line"></i>
-                                        </a>
-                                    </div>
-                                    <a class="cr-shopping-bag" href="javascript:void(0)">
-                                        <i class="ri-shopping-bag-line"></i>
-                                    </a>
+
                                 </div>
                                 <div class="cr-product-details">
                                     <div class="cr-brand">
-                                        <a href="shop-left-sidebar.html">cappuccinoss</a>
+                                        <a href="{{ url_for('coffee_all') }}">cappuccinoss</a>
                                         <div class="cr-star">
                                             <i class="ri-star-fill"></i>
                                             <i class="ri-star-fill"></i>
@@ -243,10 +227,8 @@
                                             <p>(4.5)</p>
                                         </div>
                                     </div>
-                                    <a href="product-left-sidebar.html" class="title">Fresh organic villa farm lomon
-                                        500gm pack</a>
-                                    <p class="cr-price"><span class="new-price">$120.25</span> <span
-                                            class="old-price">$123.25</span></p>
+                                    <a href="{{ url_for('coffee_all') }}" class="title">Caremel Cappuccino</a>
+                                    <p class="cr-price"><span class="new-price">$7.0</span> </p>
                                 </div>
                             </div>
                         </div>
@@ -271,7 +253,7 @@
                                 </div>
                                 <div class="cr-product-details">
                                     <div class="cr-brand">
-                                        <a href="shop-left-sidebar.html">cappuccinoss</a>
+                                        <a href="{{ url_for('coffee_all') }}">cappuccinoss</a>
                                         <div class="cr-star">
                                             <i class="ri-star-fill"></i>
                                             <i class="ri-star-fill"></i>
@@ -281,48 +263,8 @@
                                             <p>(4.5)</p>
                                         </div>
                                     </div>
-                                    <a href="product-left-sidebar.html" class="title">Fresh organic villa farm lomon
-                                        500gm pack</a>
-                                    <p class="cr-price"><span class="new-price">$120.25</span> <span
-                                            class="old-price">$123.25</span></p>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="mix cappuccinos col-xxl-3 col-xl-4 col-6 cr-product-box mb-24">
-                            <div class="cr-product-card">
-                                <div class="cr-product-image">
-                                    <div class="cr-image-inner zoom-image-hover">
-                                        <img src="/static/img/product/CappuccinoIced.jpeg" alt="product-1">
-                                    </div>
-                                    <div class="cr-side-view">
-                                        <a href="javascript:void(0)" class="wishlist">
-                                            <i class="ri-heart-line"></i>
-                                        </a>
-                                        <a class="model-oraganic-product" data-bs-toggle="modal" href="#quickview"
-                                            role="button">
-                                            <i class="ri-eye-line"></i>
-                                        </a>
-                                    </div>
-                                    <a class="cr-shopping-bag" href="javascript:void(0)">
-                                        <i class="ri-shopping-bag-line"></i>
-                                    </a>
-                                </div>
-                                <div class="cr-product-details">
-                                    <div class="cr-brand">
-                                        <a href="shop-left-sidebar.html">cappuccinoss</a>
-                                        <div class="cr-star">
-                                            <i class="ri-star-fill"></i>
-                                            <i class="ri-star-fill"></i>
-                                            <i class="ri-star-fill"></i>
-                                            <i class="ri-star-fill"></i>
-                                            <i class="ri-star-line"></i>
-                                            <p>(4.5)</p>
-                                        </div>
-                                    </div>
-                                    <a href="product-left-sidebar.html" class="title">Fresh organic villa farm lomon
-                                        500gm pack</a>
-                                    <p class="cr-price"><span class="new-price">$120.25</span> <span
-                                            class="old-price">$123.25</span></p>
+                                    <a href="{{ url_for('coffee_all') }}" class="title">Normal Cappuccino</a>
+                                    <p class="cr-price"><span class="new-price">$6</span> </p>
                                 </div>
                             </div>
                         </div>
@@ -332,22 +274,11 @@
                                     <div class="cr-image-inner zoom-image-hover">
                                         <img src="/static/img/product/AmericanoCoffee.jpeg" alt="product-1">
                                     </div>
-                                    <div class="cr-side-view">
-                                        <a href="javascript:void(0)" class="wishlist">
-                                            <i class="ri-heart-line"></i>
-                                        </a>
-                                        <a class="model-oraganic-product" data-bs-toggle="modal" href="#quickview"
-                                            role="button">
-                                            <i class="ri-eye-line"></i>
-                                        </a>
-                                    </div>
-                                    <a class="cr-shopping-bag" href="javascript:void(0)">
-                                        <i class="ri-shopping-bag-line"></i>
-                                    </a>
+
                                 </div>
                                 <div class="cr-product-details">
                                     <div class="cr-brand">
-                                        <a href="shop-left-sidebar.html">Snacks</a>
+                                        <a href="{{ url_for('coffee_all') }}">Americano</a>
                                         <div class="cr-star">
                                             <i class="ri-star-fill"></i>
                                             <i class="ri-star-fill"></i>
@@ -357,10 +288,8 @@
                                             <p>(5.0)</p>
                                         </div>
                                     </div>
-                                    <a href="product-left-sidebar.html" class="title">Best snakes with hazel nut pack
-                                        200gm</a>
-                                    <p class="cr-price"><span class="new-price">$145</span> <span
-                                            class="old-price">$150</span></p>
+                                    <a href="{{ url_for('coffee_all') }}" class="title">Americano</a>
+                                    <p class="cr-price"><span class="new-price">$4</span></p>
                                 </div>
                             </div>
                         </div>
@@ -370,22 +299,11 @@
                                     <div class="cr-image-inner zoom-image-hover">
                                         <img src="/static/img/product/Espresso.jpeg" alt="product-1">
                                     </div>
-                                    <div class="cr-side-view">
-                                        <a href="javascript:void(0)" class="wishlist">
-                                            <i class="ri-heart-line"></i>
-                                        </a>
-                                        <a class="model-oraganic-product" data-bs-toggle="modal" href="#quickview"
-                                            role="button">
-                                            <i class="ri-eye-line"></i>
-                                        </a>
-                                    </div>
-                                    <a class="cr-shopping-bag" href="javascript:void(0)">
-                                        <i class="ri-shopping-bag-line"></i>
-                                    </a>
+
                                 </div>
                                 <div class="cr-product-details">
                                     <div class="cr-brand">
-                                        <a href="shop-left-sidebar.html">espressos</a>
+                                        <a href="{{ url_for('coffee_all') }}">espressos</a>
                                         <div class="cr-star">
                                             <i class="ri-star-fill"></i>
                                             <i class="ri-star-fill"></i>
@@ -395,35 +313,22 @@
                                             <p>(4.5)</p>
                                         </div>
                                     </div>
-                                    <a href="product-left-sidebar.html" class="title">Fresh organic apple 1kg simla
-                                        marming</a>
-                                    <p class="cr-price"><span class="new-price">$120.25</span> <span
-                                            class="old-price">$123.25</span></p>
+                                    <a href="{{ url_for('coffee_all') }}" class="title">Bold Espresso</a>
+                                    <p class="cr-price"><span class="new-price">$5</span> </p>
                                 </div>
                             </div>
                         </div>
-                        <div class="mix bakery col-xxl-3 col-xl-4 col-6 cr-product-box mb-24">
+                        <div class="mix specials col-xxl-3 col-xl-4 col-6 cr-product-box mb-24">
                             <div class="cr-product-card">
                                 <div class="cr-product-image">
                                     <div class="cr-image-inner zoom-image-hover">
-                                        <img src="/static/img/product/17.jpg" alt="product-1">
+                                        <img src="/static/img/product/TurkishCoffee.jpeg" alt="product-1">
                                     </div>
-                                    <div class="cr-side-view">
-                                        <a href="javascript:void(0)" class="wishlist">
-                                            <i class="ri-heart-line"></i>
-                                        </a>
-                                        <a class="model-oraganic-product" data-bs-toggle="modal" href="#quickview"
-                                            role="button">
-                                            <i class="ri-eye-line"></i>
-                                        </a>
-                                    </div>
-                                    <a class="cr-shopping-bag" href="javascript:void(0)">
-                                        <i class="ri-shopping-bag-line"></i>
-                                    </a>
+
                                 </div>
                                 <div class="cr-product-details">
                                     <div class="cr-brand">
-                                        <a href="shop-left-sidebar.html">Bakery</a>
+                                        <a href="{{ url_for('coffee_all') }}">Specials</a>
                                         <div class="cr-star">
                                             <i class="ri-star-fill"></i>
                                             <i class="ri-star-fill"></i>
@@ -433,10 +338,8 @@
                                             <p>(5.0)</p>
                                         </div>
                                     </div>
-                                    <a href="product-left-sidebar.html" class="title">Delicious white baked fresh bread
-                                        and toast</a>
-                                    <p class="cr-price"><span class="new-price">$20</span> <span
-                                            class="old-price">$22.10</span></p>
+                                    <a href="{{ url_for('coffee_all') }}" class="title">Turkish Coffee</a>
+                                    <p class="cr-price"><span class="new-price">$6</span> </p>
                                 </div>
                             </div>
                         </div>
@@ -446,22 +349,11 @@
                                     <div class="cr-image-inner zoom-image-hover">
                                         <img src="/static/img/product/AmericanoIced.jpeg" alt="product-1">
                                     </div>
-                                    <div class="cr-side-view">
-                                        <a href="javascript:void(0)" class="wishlist">
-                                            <i class="ri-heart-line"></i>
-                                        </a>
-                                        <a class="model-oraganic-product" data-bs-toggle="modal" href="#quickview"
-                                            role="button">
-                                            <i class="ri-eye-line"></i>
-                                        </a>
-                                    </div>
-                                    <a class="cr-shopping-bag" href="javascript:void(0)">
-                                        <i class="ri-shopping-bag-line"></i>
-                                    </a>
+
                                 </div>
                                 <div class="cr-product-details">
                                     <div class="cr-brand">
-                                        <a href="shop-left-sidebar.html">Snacks</a>
+                                        <a href="{{ url_for('coffee_all') }}">Americano</a>
                                         <div class="cr-star">
                                             <i class="ri-star-fill"></i>
                                             <i class="ri-star-fill"></i>
@@ -471,10 +363,8 @@
                                             <p>(5.0)</p>
                                         </div>
                                     </div>
-                                    <a href="product-left-sidebar.html" class="title">Sweet crunchy nut mix 250gm
-                                        pack</a>
-                                    <p class="cr-price"><span class="new-price">$120.25</span> <span
-                                            class="old-price">$123.25</span></p>
+                                    <a href="{{ url_for('coffee_all') }}" class="title">Iced Americano</a>
+                                    <p class="cr-price"><span class="new-price">$4</span></p>
                                 </div>
                             </div>
                         </div>
@@ -484,22 +374,11 @@
                                     <div class="cr-image-inner zoom-image-hover">
                                         <img src="/static/img/product/EspressoWhipped.jpeg" alt="product-1">
                                     </div>
-                                    <div class="cr-side-view">
-                                        <a href="javascript:void(0)" class="wishlist">
-                                            <i class="ri-heart-line"></i>
-                                        </a>
-                                        <a class="model-oraganic-product" data-bs-toggle="modal" href="#quickview"
-                                            role="button">
-                                            <i class="ri-eye-line"></i>
-                                        </a>
-                                    </div>
-                                    <a class="cr-shopping-bag" href="javascript:void(0)">
-                                        <i class="ri-shopping-bag-line"></i>
-                                    </a>
+
                                 </div>
                                 <div class="cr-product-details">
                                     <div class="cr-brand">
-                                        <a href="shop-left-sidebar.html">espressos</a>
+                                        <a href="{{ url_for('coffee_all') }}">espressos</a>
                                         <div class="cr-star">
                                             <i class="ri-star-fill"></i>
                                             <i class="ri-star-fill"></i>
@@ -509,10 +388,8 @@
                                             <p>(3.2)</p>
                                         </div>
                                     </div>
-                                    <a href="product-left-sidebar.html" class="title">Organic fresh venila farm
-                                        watermelon 5kg</a>
-                                    <p class="cr-price"><span class="new-price">$50.30</span> <span
-                                            class="old-price">$72.60</span></p>
+                                    <a href="{{ url_for('coffee_all') }}" class="title">Whipped Espresso</a>
+                                    <p class="cr-price"><span class="new-price">$4</span></p>
                                 </div>
                             </div>
                         </div>
@@ -522,22 +399,11 @@
                                     <div class="cr-image-inner zoom-image-hover">
                                         <img src="/static/img/product/AmericanoShaken.jpeg" alt="product-1">
                                     </div>
-                                    <div class="cr-side-view">
-                                        <a href="javascript:void(0)" class="wishlist">
-                                            <i class="ri-heart-line"></i>
-                                        </a>
-                                        <a class="model-oraganic-product" data-bs-toggle="modal" href="#quickview"
-                                            role="button">
-                                            <i class="ri-eye-line"></i>
-                                        </a>
-                                    </div>
-                                    <a class="cr-shopping-bag" href="javascript:void(0)">
-                                        <i class="ri-shopping-bag-line"></i>
-                                    </a>
+
                                 </div>
                                 <div class="cr-product-details">
                                     <div class="cr-brand">
-                                        <a href="shop-left-sidebar.html">Snacks</a>
+                                        <a href="{{ url_for('coffee_all') }}">Americano</a>
                                         <div class="cr-star">
                                             <i class="ri-star-fill"></i>
                                             <i class="ri-star-fill"></i>
@@ -547,50 +413,11 @@
                                             <p>(5.0)</p>
                                         </div>
                                     </div>
-                                    <a href="product-left-sidebar.html" class="title">Sweet crunchy nut mix 250gm
-                                        pack</a>
-                                    <p class="cr-price"><span class="new-price">$120.25</span> <span
-                                            class="old-price">$123.25</span></p>
+                                    <a href="{{ url_for('coffee_all') }}" class="title">Shaken Americano</a>
+                                    <p class="cr-price"><span class="new-price">$4</span></p>
                                 </div>
                             </div>
                         </div>
-                        <div class="mix bakery col-xxl-3 col-xl-4 col-6 cr-product-box mb-24">
-                            <div class="cr-product-card">
-                                <div class="cr-product-image">
-                                    <div class="cr-image-inner zoom-image-hover">
-                                        <img src="/static/img/product/17.jpg" alt="product-1">
-                                    </div>
-                                    <div class="cr-side-view">
-                                        <a href="javascript:void(0)" class="wishlist">
-                                            <i class="ri-heart-line"></i>
-                                        </a>
-                                        <a class="model-oraganic-product" data-bs-toggle="modal" href="#quickview"
-                                            role="button">
-                                            <i class="ri-eye-line"></i>
-                                        </a>
-                                    </div>
-                                    <a class="cr-shopping-bag" href="javascript:void(0)">
-                                        <i class="ri-shopping-bag-line"></i>
-                                    </a>
-                                </div>
-                                <div class="cr-product-details">
-                                    <div class="cr-brand">
-                                        <a href="shop-left-sidebar.html">Bakery</a>
-                                        <div class="cr-star">
-                                            <i class="ri-star-fill"></i>
-                                            <i class="ri-star-fill"></i>
-                                            <i class="ri-star-fill"></i>
-                                            <i class="ri-star-fill"></i>
-                                            <i class="ri-star-fill"></i>
-                                            <p>(5.0)</p>
-                                        </div>
-                                    </div>
-                                    <a href="product-left-sidebar.html" class="title">Delicious white baked fresh bread
-                                        and toast</a>
-                                    <p class="cr-price"><span class="new-price">$20</span> <span
-                                            class="old-price">$22.10</span></p>
-                                </div>
-                            </div>
                         </div>
                     </div>
                 </div>
@@ -612,7 +439,7 @@
                                             <i class="ri-tree-line"></i>
                                         </div>
                                         <div class="cr-services-contain">
-                                            <h4>Sustainable Pacing</h4>
+                                            <h4>Sustainable Packing</h4>
                                             <p>Our cups are eco-friendly, crafted from recyclable materials to protect the environment.</p>
                                         </div>
                                     </div>
@@ -910,10 +737,10 @@
                 </div>
                 <ul class="crcart-pro-items">
                     <li>
-                        <a href="product-left-sidebar.html" class="crside_pro_img"><img src="/static/img/product/4.jpg"
+                        <a href="{{ url_for('coffee_all') }}" class="crside_pro_img"><img src="/static/img/product/4.jpg"
                                 alt="product-1"></a>
                         <div class="cr-pro-content">
-                            <a href="product-left-sidebar.html" class="cart_pro_title">Fresh Pomegranate</a>
+                            <a href="{{ url_for('coffee_all') }}" class="cart_pro_title">Fresh Pomegranate</a>
                             <span class="cart-price"><span>$56.00</span> x 1kg</span>
                             <div class="cr-cart-qty">
                                 <div class="cart-qty-plus-minus">
@@ -927,10 +754,10 @@
                         </div>
                     </li>
                     <li>
-                        <a href="product-left-sidebar.html" class="crside_pro_img"><img src="/static/img/product/2.jpg"
+                        <a href="{{ url_for('coffee_all') }}" class="crside_pro_img"><img src="/static/img/product/2.jpg"
                                 alt="product-2"></a>
                         <div class="cr-pro-content">
-                            <a href="product-left-sidebar.html" class="cart_pro_title">Green Apples</a>
+                            <a href="{{ url_for('coffee_all') }}" class="cart_pro_title">Green Apples</a>
                             <span class="cart-price"><span>$75.00</span> x 1kg</span>
                             <div class="cr-cart-qty">
                                 <div class="cart-qty-plus-minus">
@@ -944,10 +771,10 @@
                         </div>
                     </li>
                     <li>
-                        <a href="product-left-sidebar.html" class="crside_pro_img"><img src="/static/img/product/3.jpg"
+                        <a href="{{ url_for('coffee_all') }}" class="crside_pro_img"><img src="/static/img/product/3.jpg"
                                 alt="product-3"></a>
                         <div class="cr-pro-content">
-                            <a href="product-left-sidebar.html" class="cart_pro_title">Watermelon - Small</a>
+                            <a href="{{ url_for('coffee_all') }}" class="cart_pro_title">Watermelon - Small</a>
                             <span class="cart-price"><span>$48.00</span> x 5kg</span>
                             <div class="cr-cart-qty">
                                 <div class="cart-qty-plus-minus">

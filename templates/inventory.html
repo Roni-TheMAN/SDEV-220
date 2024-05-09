@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Inventory</title>
+</head>
+<body>
+<a href="{{ url_for('orders') }}"> Orders </a>
+<a href="{{ url_for('hello_world') }}"> Home </a>
+
+<table border="1" >
+    <tr>
+        <th>Id</th>
+
+        <th>coffee bags</th>
+
+        <th>sugar packets</th>
+
+        <th>creamer packets</th>
+
+        <th>cups</th>
+
+    </tr>
+
+    {% for row in rows %}
+    <tr>
+        <td>{{ row[0] }}</td>
+
+        <td>{{ row[1] }}</td>
+
+        <td>{{ row[2] }}</td>
+
+        <td>{{ row[3] }}</td>
+
+        <td>{{ row[4] }}</td>
+    </tr>
+    {% endfor %}
+</table>
+
+<hr>
+
+<form action="/inventory/update" method="post">
+    <label for="coffee_bags">Coffee Bags:</label>
+    <input type="text" id="coffee_bags" name="coffee_bags"><br><br>
+
+    <label for="sugar_packets">Sugar Packets:</label>
+    <input type="text" id="sugar_packets" name="sugar_packets"><br><br>
+
+    <label for="creamer_packets">Creamer Packets:</label>
+    <input type="text" id="creamer_packets" name="creamer_packets"><br><br>
+
+    <label for="cups">Cups:</label>
+    <input type="text" id="cups" name="cups"><br><br>
+
+    <input type="submit" value="Submit">
+</form>
+
+</body>
+</html>

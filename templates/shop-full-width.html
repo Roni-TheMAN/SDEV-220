@@ -5,12 +5,11 @@
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="keywords"
-        content="ecommerce, market, shop, mart, cart, deal, multipurpose, marketplace">
+    <meta name="keywords" content="ecommerce, market, shop, mart, cart, deal, multipurpose, marketplace">
     <meta name="description" content="Carrot - Multipurpose eCommerce HTML Template.">
-    <meta name="author" content="ashishmaraviya">
+    <meta name="author" content="">
 
-    <title>KillerBeanCoffee - Coffee</title>
+    <title>Killer Bean Coffee - Home Page </title>
 
     <!-- App favicon -->
     <link rel="shortcut icon" href="/static/img/logo/killerbeanFavicon.png">
@@ -29,7 +28,7 @@
     <link rel="stylesheet" href="/static/css/vendor/slick-theme.css">
 
     <!-- Main CSS -->
-    <link rel="stylesheet" href="/static/css/style.css">
+    <link rel="stylesheet" href="/static//css/style.css">
 </head>
 
 <body class="body-bg-6">
@@ -156,7 +155,7 @@
                                     <li data-filter=".americano">Americano</li>
                                     <li data-filter=".cappuccinos">Cappuccinos</li>
                                     <li data-filter=".espresso">Espresso</li>
-                                    <li data-filter=".bakery">Bakery</li>
+                                    <li data-filter=".specialities">Specials</li>
                                 </ul>
                             </div>
                         </div>
@@ -164,74 +163,37 @@
                 </div>
                 <div class="col-xl-9 col-lg-8 col-12 mb-24">
                     <div class="row mb-minus-24">
-                        <div class="mix cappuccinos col-xxl-3 col-xl-4 col-6 cr-product-box mb-24">
+                        {% for row in rows %}
+                        <div class="mix {{ row[5] }} col-xxl-3 col-xl-4 col-6 cr-product-box mb-24">
                             <div class="cr-product-card">
                                 <div class="cr-product-image">
                                     <div class="cr-image-inner zoom-image-hover">
-                                        <img src="/static/img/product/CappuccinoCaremel.jpeg" alt="product-1">
+                                        <img src="/static/img/product/{{ row[4] }}" alt="product-1">
                                     </div>
+                                </div>
 
-                                </div>
-                                <hr>
-                                    <div class="cr-add-button" style="display: flex; justify-content: center;">
-                                        <button type="button" class="cr-button"  >Add to cart</button>
-                                    </div>  
-                                    <div class="cr-product-details">
-                                    <div class="cr-brand">
-                                        cappuccinoss
-
-                                    </div>
-                                    <a href="product-left-sidebar.html" class="title">Fresh organic villa farm lomon
-                                        500gm pack</a>
-                                    <p class="cr-price"><span class="new-price">$120.25</span> <span
-                                            class="old-price">$123.25</span></p>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="mix cappuccinos col-xxl-3 col-xl-4 col-6 cr-product-box mb-24">
-                            <div class="cr-product-card">
-                                <div class="cr-product-image">
-                                    <div class="cr-image-inner zoom-image-hover">
-                                        <img src="/static/img/product/CappuccinoCoffee.jpeg" alt="product-1">
-                                    </div>
-                                    <a class="cr-shopping-bag" href="javascript:void(0)">
-                                        <i class="ri-shopping-bag-line"></i>
-                                    </a>
-                                </div>
                                 <div class="cr-product-details">
                                     <div class="cr-brand">
-                                        <a href="shop-left-sidebar.html">cappuccinoss</a>
-
+                                        {{ row[5] }}
                                     </div>
-                                    <a href="product-left-sidebar.html" class="title">Fresh organic villa farm lomon
-                                        500gm pack</a>
-                                    <p class="cr-price"><span class="new-price">$120.25</span> <span
-                                            class="old-price">$123.25</span></p>
+                                        <br>
+                                    <p href="product-left-sidebar.html" class="title">{{ row[3] }} </p>
+                                    <p class="cr-price"><span class="new-price">${{ row[2] }} </span> </p>
+                                    <form action="/add_to_cart" method="post">
+                                        <input type="hidden" name="product_id" value="{{ row[0] }}">
+                                        <input type="hidden" name="product_name" value="{{ row[1] }}">
+                                        <input type="hidden" name="product_price" value="{{ row[2] }}">
+                                        <input type="hidden" name="product_image" value="{{ row[4] }}">
+                                        <input type="hidden" name="product_quantity" value="1">
+                                        <div class="cr-add-button" style="display: flex; justify-content: center;">
+                                            <button type="submit" class="cr-button"  >Add to cart</button>
+                                        </div>
+                                    </form>
+
                                 </div>
                             </div>
                         </div>
-                        <div class="mix cappuccinos col-xxl-3 col-xl-4 col-6 cr-product-box mb-24">
-                            <div class="cr-product-card">
-                                <div class="cr-product-image">
-                                    <div class="cr-image-inner zoom-image-hover">
-                                        <img src="/static/img/product/CappuccinoIced.jpeg" alt="product-1">
-                                    </div>
-                                    <a class="cr-shopping-bag" href="javascript:void(0)">
-                                        <i class="ri-shopping-bag-line"></i>
-                                    </a>
-                                </div>
-                                <div class="cr-product-details">
-                                    <div class="cr-brand">
-                                        <a href="shop-left-sidebar.html">cappuccinoss</a>
-
-                                    </div>
-                                    <a href="product-left-sidebar.html" class="title">Fresh organic villa farm lomon
-                                        500gm pack</a>
-                                    <p class="cr-price"><span class="new-price">$120.25</span> <span
-                                            class="old-price">$123.25</span></p>
-                                </div>
-                            </div>
-                        </div>
+                        {% endfor %}
 
                     </div>
                 </div>

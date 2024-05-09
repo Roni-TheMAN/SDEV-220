@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>ORDERS</title>
+
+</head>
+<body>
+
+    <h1>ORDERS</h1>
+
+    <a href="{{ url_for('inventory') }}"> Inventory  </a>
+<a href="{{ url_for('hello_world') }}"> Home </a>
+<table border="1" >
+    <tr>
+        <th>Order ID</th>
+
+        <th>Order Details</th>
+
+        <th>Actions</th>
+    </tr>
+
+    {% for row in rows %}
+    <tr>
+        <td>{{ row[0] }}</td>
+
+        <td>{{ row[1] }}</td>
+        <form action="/orders/delete" method="post">
+            <input type="hidden" name="id" value="{{ row[0] }}">
+            <td> <input type="submit" value="Delete"> </td>
+        </form>
+
+        <form action="/orders/fulfilled" method="post">
+            <input type="hidden" name="id" value="{{ row[0] }}">
+            <td> <input type="submit" value="Fulfilled"> </td>
+        </form>
+
+    </tr>
+    {% endfor %}
+</table>
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
